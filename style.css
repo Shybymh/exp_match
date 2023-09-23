@@ -1,0 +1,11 @@
+* {
+    box-sizing: border-box;
+}
+.header {
+    background-color: aqua;
+    border: 15px solid yellow;
+}
+
+h1{
+    margin: 15px;
+}
