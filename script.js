@@ -9,15 +9,15 @@ let numberOfLeaves = 0;
                 level = Number(document.getElementById("level").value);
                 
                 if (level === 3 || level ===  5 || level === 8) {
-
                     numberOfLeaves = level;
                     generateLeaves();
                     document.getElementById("level").style.display = "none";
+
                 }
             }
 
             function generateLeaves() {
-
+                
                 for( i=0 ; i < numberOfLeaves ;i++ ) {
                     const leaves = ["images2/leaf0.png", "images2/leaf1.png", "images2/leaf3.png","images2/leaf5.png", "images2/leaf6.png", "images2/leaf7.png", "images2/leaf8.png",
                                     "images2/leaf11.png", "images2/leaf12.png"];
@@ -26,7 +26,7 @@ let numberOfLeaves = 0;
                     const leaf = document.createElement('img');
                     leaf.src = leaves[randomleafIdx];
                     
-                    let randomTop = Math.floor(Math.random() * 300)  + 1;
+                    let randomTop = Math.floor(Math.random() * 400)  + 1;
                     let randomLeft = Math.floor(Math.random() * 400) + 1;
                     leaf.style.top = randomTop + 'px' ;
                     leaf.style.left = randomLeft + 'px' ;
@@ -34,10 +34,12 @@ let numberOfLeaves = 0;
                     theLeftSide.appendChild(leaf);
                     console.log(randomTop, randomLeft);
                 }
-                
+
+               
                 const leftSideImages = theLeftSide.cloneNode(true);
                 leftSideImages.removeChild(leftSideImages.lastChild);
                 theRightSide.appendChild(leftSideImages);
+                console.log(leftSideImages);
                 document.getElementById("gamemusic").play()
                 theLeftSide.addEventListener('click', gameOver);
                 theLeftSide.lastChild.addEventListener('click',nextLevel);
@@ -69,6 +71,7 @@ let numberOfLeaves = 0;
                 modal.style.display = "block";
                 span.onclick = function() {
                 modal.style.display = "none";
+               
                 }  
 
                 if (numTries < 0) {
@@ -86,10 +89,11 @@ let numberOfLeaves = 0;
                     theRightSide.removeChild(theRightSide.firstChild);
                 }
                 document.getElementById("startButton").style.display = "block";
-                document.body.removeEventListener('click',gameOver);
+                theLeftSide.removeEventListener('click',gameOver);
             }
 
             function startGame() {
+               
                 numberOfLeaves = 0;
                 numTries = 0;
                 document.getElementById("startButton").style.display = "none";

@@ -26,6 +26,15 @@
             <h1>Pick a Leaf</h1>
             <p>Play in 1280 * 800 or above</p>
            
+            
+           
+            <h2 >Click only on the extra leaf on the left</h2>
+            
+        </header>
+        
+        
+        
+        <main>
             <div id="buttons">
                 <button id="startButton" onclick="startGame()">Restart</button>
                 <select id="level" name="level" onChange="selectLevel()">
@@ -35,20 +44,14 @@
                     <option value="8">Difficult</option>
                 </select>
             </div>
-           
-            <h2 >Click the extra leaf on the left</h2>
-            
-        </header>
-       
-        
-        <main  id="gamespace">
-           
-            <div id="leftSide"></div>
-            
-            <div id="rightSide"></div> 
+            <div  id="gamespace">
+                <div id="leftSide"></div>
+                <div id="rightSide"></div> 
+            </div>
+
         </main>
 
-        <!-- <h2 id="bottomline">Play in full screen</h2> -->
+       
 
          <!-- The Modal -->
          <div id="gameoverModal" class="modal">
