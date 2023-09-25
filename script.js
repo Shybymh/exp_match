@@ -27,19 +27,18 @@ let numberOfLeaves = 0;
                     const leaf = document.createElement('img');
                     leaf.src = leaves[randomleafIdx];
                     
-                    let randomTop = Math.floor(Math.random() * 200)  + 1;
-                    let randomLeft = Math.floor(Math.random() * 100) + 1;
+                    let randomTop = Math.floor(Math.random() * 300)  + 1;
+                    let randomLeft = Math.floor(Math.random() * 500) + 1;
                     leaf.style.top = randomTop + 'px' ;
                     leaf.style.left = randomLeft + 'px' ;
-                    console.log(randomTop, randomLeft);
+                    
                     theLeftSide.appendChild(leaf);
-                   
+                    console.log(randomTop, randomLeft);
                 }
                 
                 const leftSideImages = theLeftSide.cloneNode(true);
                 leftSideImages.removeChild(leftSideImages.lastChild);
                 theRightSide.appendChild(leftSideImages);
-              
                 document.getElementById("gamemusic").play()
                 theLeftSide.addEventListener('click', gameOver);
                 theLeftSide.lastChild.addEventListener('click',nextLevel);
