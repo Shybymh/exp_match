@@ -3,21 +3,35 @@
    
 }
 
-/* body {
+body {
     display: grid; 
-    overflow: hidden; 
-} */
+    overflow: hidden;
+   /* background-image: linear-gradient(rgb(243, 97, 12),greenyellow); */
+   height: 100vh;
+    background-image:  url("images2/fall_trees.jpg");
+    background-size: contain;
+    /* background-color: rgb(221, 207, 16); */
+}
 .header {
-    background-color: aqua;
-    border: 15px solid yellow;
+    /* background-image: url("images2/treecut.png");
+    background-size: contain; */
+    background-color: rgba(237, 235, 161, 0.8);
+    /* border: 2px solid orangered; */
+    border-radius: 15px;
     display: grid;
-    
+    margin-bottom: 20px;
+   
+    /* text-shadow: 5px 2px brown; */
     
 }
 
-h1,h2,h3,#buttons,#level,#startButton {
+h1,h2,h3,p,#buttons,#level,#startButton {
     justify-self: center;
     align-self: center;
+}
+
+h1,h2,h3,p {
+    color: orangered;
 }
 
 #buttons {
@@ -25,7 +39,9 @@ h1,h2,h3,#buttons,#level,#startButton {
 }
 
 #level,#startButton {
-    padding-top: 20px;
+    /* padding-top: 20px; */
+    position: absolute;
+                left: 100px;
     background-color: rgba(220, 68, 13, 0.954);
     color: cornsilk;
     width: 100px;
@@ -40,12 +56,14 @@ h1,h2,h3,#buttons,#level,#startButton {
     display: flex;
     flex-direction: row;
     margin: 0 auto;
+   
     /* inline-size: 70vw; */
-    width: 100%;
+    width: 70%;
     aspect-ratio: 2/1;
     background: greenyellow;
-    border: 3px solid yellow;
-    border-radius: 25px;
+    border: 3px solid rgb(255, 123, 0);
+    border-radius: 50px;
+    background-image: url("images2/grass.png");
 }
 
 /* #vertical {
@@ -53,10 +71,12 @@ h1,h2,h3,#buttons,#level,#startButton {
     border-left: 5px solid red ;
 } */
 
-#leftSide {
+#leftSide,#rightSide {
+   
+    position: relative;
     width: 50%;
     height: 100%;
-   
+    display: flex;
 }
 
 #rightSide {
@@ -66,9 +86,13 @@ h1,h2,h3,#buttons,#level,#startButton {
 }
 
 img {
-    width: 50px;
-    height: 50px;
-    position: relative;
+    width: 75px;
+    height: 75px;
+    position: absolute;
+}
+
+#bottomline {
+    color: red;
 }
 
 .modal {
@@ -85,12 +109,17 @@ img {
     }
 
     .modal-content {
+       
     border: 5px solid #2d5312d6;
     background-color: rgb(24, 52, 17);
     margin: 15% auto;
         padding: 20px;
         width: 50%;
         height: 50%;
+    }
+
+    #content {
+        display: grid;
     }
 
     .close {

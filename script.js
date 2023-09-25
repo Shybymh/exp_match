@@ -28,7 +28,7 @@ let numberOfLeaves = 0;
                     leaf.src = leaves[randomleafIdx];
                     
                     let randomTop = Math.floor(Math.random() * 300)  + 1;
-                    let randomLeft = Math.floor(Math.random() * 500) + 1;
+                    let randomLeft = Math.floor(Math.random() * 400) + 1;
                     leaf.style.top = randomTop + 'px' ;
                     leaf.style.left = randomLeft + 'px' ;
                     
@@ -60,6 +60,7 @@ let numberOfLeaves = 0;
 
             function gameOver() {
                 numTries -=1;
+                let score = 0;
 
                 document.getElementById("gamemusic").pause()
                 document.getElementById("gameovermusic").play()
@@ -71,7 +72,12 @@ let numberOfLeaves = 0;
                 modal.style.display = "none";
                 }  
 
-                let score = numTries * 10
+                if (numTries < 0) {
+                    score = 0;
+                }else{
+                    score = numTries * 10
+                }
+                
                 document.getElementById('score').innerText = score
                 theLeftSide.lastChild.removeEventListener('click',nextLevel);
                 while (theLeftSide.firstChild){
