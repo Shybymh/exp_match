@@ -6,22 +6,16 @@
 body {
     display: grid; 
     overflow: hidden;
-   /* background-image: linear-gradient(rgb(243, 97, 12),greenyellow); */
-   height: 100vh;
+    height: 100vh;
     background-image:  url("images2/fall_trees.jpg");
     background-size: contain;
-    /* background-color: rgb(221, 207, 16); */
 }
+
 .header {
-    /* background-image: url("images2/treecut.png");
-    background-size: contain; */
     background-color: rgba(237, 235, 161, 0.8);
-    /* border: 2px solid orangered; */
     border-radius: 15px;
     display: grid;
     margin-bottom: 20px;
-   
-    /* text-shadow: 5px 2px brown; */
     
 }
 
@@ -39,16 +33,14 @@ h1,h2,h3,p {
 }
 
 #level,#startButton {
-    /* padding-top: 20px; */
     position: absolute;
-                left: 100px;
+    left: 100px;
     background-color: rgba(220, 68, 13, 0.954);
     color: cornsilk;
     width: 100px;
     height: 50px;
     border-radius: 15px;
     font-size: 1rem;
-    
    
 }
 
@@ -56,8 +48,6 @@ h1,h2,h3,p {
     display: flex;
     flex-direction: row;
     margin: 0 auto;
-   
-    /* inline-size: 70vw; */
     width: 70%;
     aspect-ratio: 2/1;
     background: greenyellow;
@@ -66,10 +56,6 @@ h1,h2,h3,p {
     background-image: url("images2/grass.png");
 }
 
-/* #vertical {
-    left: 500px;
-    border-left: 5px solid red ;
-} */
 
 #leftSide,#rightSide {
    

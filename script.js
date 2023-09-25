@@ -13,7 +13,6 @@ let numberOfLeaves = 0;
                     numberOfLeaves = level;
                     generateLeaves();
                     document.getElementById("level").style.display = "none";
-                    // document.getElementById("begin").style.display = "block";
                 }
             }
 
