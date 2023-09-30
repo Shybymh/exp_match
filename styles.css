@@ -8,6 +8,7 @@ body {
     height: 100vh;
     background-image:  url("images2/fall_trees.jpg");
     background-size: contain;
+    font-family :Arial, Helvetica, sans-serif;
 }
 
 .header {
