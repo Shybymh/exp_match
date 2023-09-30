@@ -4,8 +4,7 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
         <title>Pick the extra leaf</title>
-        <link href="style.css" rel="stylesheet"/>
-        
+        <link href="styles.css" rel="stylesheet"/>
     </head>
     <body onload="startGame()">
 
@@ -25,15 +24,8 @@
         <header class="header">
             <h1>Pick a Leaf</h1>
             <p>Play in 1280 * 800 or above</p>
-           
-            
-           
             <h2 >Click only on the extra leaf on the left</h2>
-            
         </header>
-        
-        
-        
         <main>
             <div id="buttons">
                 <button id="startButton" onclick="startGame()">Restart</button>
@@ -48,17 +40,12 @@
                 <div id="leftSide"></div>
                 <div id="rightSide"></div> 
             </div>
-
         </main>
-
-       
-
          <!-- The Modal -->
          <div id="gameoverModal" class="modal">
             <!-- Modal content -->
             <div class="modal-content">
                 <span class="close">&times;</span>
-                
                 <div id="content">
                     <h1>Game Over</h1>
                     <h2>Your score is: </h2>

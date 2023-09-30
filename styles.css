@@ -1,0 +1,120 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: grid; 
+    overflow: hidden;
+    height: 100vh;
+    background-image:  url("images2/fall_trees.jpg");
+    background-size: contain;
+}
+
+.header {
+    background-color: rgba(237, 235, 161, 0.5);
+    border-radius: 15px;
+    display: grid;
+    margin-bottom: 20px;
+    height: 25vh;
+}
+
+h1,h2,h3,p,#buttons,#level,#startButton {
+    justify-self: center;
+    align-self: center;
+}
+
+h1,h2,h3,p {
+    color: rgb(14, 97, 25);
+}
+
+#buttons {
+    margin: 10px;
+}
+
+#level,#startButton {
+    position: absolute; 
+    left: 50px;
+    background-color: rgba(34, 116, 14, 0.954);
+    color: cornsilk;
+    width: 100px;
+    height: 50px;
+    border-radius: 15px;
+    font-size: 1rem;
+    margin-top: 0px;
+}
+
+#gamespace {
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+    width: 70%;
+    aspect-ratio: 2/1;
+    background: greenyellow;
+    border: 3px solid rgba(34, 116, 14, 0.954);
+    border-radius: 50px;
+    background-image: url("images2/grass.png");
+}
+
+
+#leftSide,#rightSide {
+   
+    position: relative;
+    width: 50%;
+    height: 100%;
+    display: flex;
+}
+
+#rightSide {
+    border-left:5px solid rgba(34, 116, 14, 0.954) ;
+    margin-right: 5px;
+}
+
+img {
+    width: 75px;
+    height: 75px;
+    position: absolute;
+}
+
+#bottomline {
+    color: red;
+}
+
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%; 
+    overflow: auto;
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4);
+    }
+
+    .modal-content {
+    border: 5px solid #ea8509d6;
+    background-color: rgba(217, 212, 79, 0.8);
+    margin: 15% auto;
+    padding: 20px;
+    width: 50%;
+    height: 50%;
+    }
+
+    #content {
+    display: grid;
+    }
+
+    .close {
+    color: #d81313;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+    }
